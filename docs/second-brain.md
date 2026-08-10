@@ -14,7 +14,7 @@ The fix is boring on purpose: a folder of plain markdown files that every sessio
 
 | Loop | Trigger | Written to | Read back by |
 | --- | --- | --- | --- |
-| **Lesson loop** | A mistake or a confirmed approach | One file in `System/learnings/` + one index line in the brain's CLAUDE.md | Every future session, at boot |
+| **Lesson loop** | A mistake or a confirmed approach | One file in `System/learnings/` + one index line in `System/learnings/Learnings Index.md` | Every future session, at boot |
 | **Approach loop** | A hard solve (extract-approach fires) | A recipe note with problem shape and dead ends | Any future session facing the same problem shape |
 | **Standards loop** | Real work invents a quality bar | A pass/fail bar in `System/standards/` | review-panel graders, every deliverable after |
 | **Calibration loop** | A gated prediction meets reality (focus-group run logs, shipped results) | Run logs with predicted vs. actual | The next scoring pass, adjusting weights |
@@ -26,7 +26,7 @@ The loops are self-pruning as well as self-growing: learnings proven wrong get d
 
 Three layers, cheapest recall first:
 
-1. **The brain's CLAUDE.md**, loaded every session. Registry, conventions, learnings index. Kept under ~200 lines because every line costs tokens forever.
+1. **The brain's CLAUDE.md**, loaded every session. Registry, conventions, pointers to deeper indexes (the learnings index lives in its own searched-not-loaded file). Kept under ~200 lines because every line costs tokens forever.
 2. **Index notes and recent session logs**, read at session start for the project at hand. One folder deep, seconds to read.
 3. **The full vault**, searched on demand (grep, or a semantic indexer if you run one). Session logs are the raw archive; nobody reads them until they need exactly one.
 

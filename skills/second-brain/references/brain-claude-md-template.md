@@ -69,11 +69,10 @@ Notes belong to one context; genuinely cross-cutting notes carry every `#ctx/*` 
 
 Hard-won lessons live **one per file** in `System/learnings/` — corrections AND confirmed approaches, each with a one-line summary at top plus **Why it mattered** / **How to apply** (approach notes add **Problem shape** — see the extract-approach skill).
 
+The full one-line-per-lesson catalog is `[[System/learnings/Learnings Index]]` — search it before claiming something is unknown. It lives in its own file, NOT here: this file loads into every session, and an inline index is a token tax that grows forever.
+
 **Maintenance rules (non-negotiable):**
 - Write a new lesson file **immediately** when a mistake happens or an approach is confirmed — never batch to end of session.
-- Before adding, check the index below — **update the existing file** rather than creating a near-duplicate.
+- Before adding, check the Learnings Index — **update the existing file** rather than creating a near-duplicate.
 - **Delete** lesson files proven wrong (and their index line).
-- Keep this index in sync: one line per lesson, summary must stand alone.
-
-**Index:**
-- *(one line per lesson: `[[System/learnings/slug|slug]] — compressed summary`)*
+- Add each new lesson's one-line entry to the Learnings Index (`[[System/learnings/slug|slug]] — compressed summary`), never to this file.
