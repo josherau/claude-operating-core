@@ -8,8 +8,8 @@
     {
       "name": "operating-core",
       "source": "../",
-      "description": "Foundational skill pack: review-panel, focus-group, storm-research, extract-approach, second-brain, vault-gardener, sales-council, and the advisor agent",
-      "version": "1.2.0"
+      "description": "Foundational skill pack: review-panel, focus-group, storm-research, extract-approach, autonomous-mode, second-brain, vault-gardener, sales-council, and the advisor agent",
+      "version": "1.3.0"
     }
   ]
 }
