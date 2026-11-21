@@ -53,6 +53,23 @@ done
 echo "Installing agent..."
 cp "$SCRIPT_DIR/agents/advisor.md" "$AGENTS_DIR/advisor.md"
 
+# Optional: append the global model and cost rule to ~/.claude/CLAUDE.md
+# (idempotent: skipped if the heading is already present).
+CLAUDE_MD="$HOME/.claude/CLAUDE.md"
+RULE_FILE="$SCRIPT_DIR/global/model-cost-rule.md"
+if [ -f "$RULE_FILE" ]; then
+    if [ -f "$CLAUDE_MD" ] && grep -q "^## Model and cost rule" "$CLAUDE_MD"; then
+        echo "Model and cost rule already in $CLAUDE_MD, skipping."
+    else
+        read -p "Append the model and cost rule to $CLAUDE_MD? (y/N) " -n 1 -r
+        echo ""
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            { echo ""; cat "$RULE_FILE"; } >> "$CLAUDE_MD"
+            echo "Appended."
+        fi
+    fi
+fi
+
 echo ""
 echo "Done. 7 skills + 1 agent installed."
 echo "Next: read docs/operating-model.md and paste the CLAUDE.md snippet"

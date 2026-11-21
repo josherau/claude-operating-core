@@ -29,7 +29,7 @@ Reviewers grade against a checklist, not vibes. Keep a standards file per recurr
 
 ## Paste-ready CLAUDE.md snippet
 
-Replace `{KNOWLEDGE_BASE}` with the real path to your knowledge base (for example `~/Documents/knowledge`), then paste into your global CLAUDE.md:
+Replace `{KNOWLEDGE_BASE}` with the real path to your knowledge base (for example `~/Documents/knowledge`), then paste into your global CLAUDE.md (the model and cost rule below also lives standalone in `global/model-cost-rule.md`, and the installer can append it to `~/.claude/CLAUDE.md` for you):
 
 ```markdown
 ## Never grade your own work (non-negotiable)
@@ -62,6 +62,21 @@ haiku subagents. When the session model is below the strongest tier, consult
 the advisor agent before committing to an approach, before declaring done,
 and when stuck (2-3 consults per task). On the strongest tier, skip the
 advisor and lean harder on cheap subagents.
+
+## Model and cost rule (Josh, 21 Nov 2026)
+
+Conserve Claude usage credits.
+
+1. First question on every task and sub-step: does this need a top model? If
+   not, downgrade. Use Haiku for mechanical work (scraping, crawling, file
+   inventories, extraction, tagging, summarising, data pulls, formatting) and
+   Sonnet for routine drafting. Keep the top model only for synthesis,
+   judgment, strategy, financial models, and investor, board or grant-critical
+   writing.
+2. Prefer tools and scripts over model reading (Treg, Composio sandbox,
+   Firecrawl/Apify, scripts writing to disk). Don't pull bulk content into
+   context.
+3. Avoid running many heavy tasks in parallel unless there's a deadline.
 
 ## Research default
 
